@@ -2,9 +2,9 @@
 
 namespace NicolasKion\ESI;
 
+use NicolasKion\ESI\Commands\ESICommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use NicolasKion\ESI\Commands\ESICommand;
 
 class ESIServiceProvider extends PackageServiceProvider
 {
