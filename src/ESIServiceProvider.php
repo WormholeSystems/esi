@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace NicolasKion\ESI;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use NicolasKion\ESI\Commands\ESICommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class ESIServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('ws-esi')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_ws_esi_table')
+            ->hasCommand(ESICommand::class);
     }
 }

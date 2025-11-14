@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace NicolasKion\ESI\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ESICommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'ws-esi';
 
     public $description = 'My command';
 
