@@ -1,12 +1,16 @@
 <?php
 
-namespace NicolasKion\ESI;
+declare(strict_types=1);
 
+namespace WormholeSystems\ESI;
+
+use Illuminate\Http\Client\Factory as Http;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use NicolasKion\ESI\Commands\ESICommand;
+use WormholeSystems\ESI\Commands\ESICommand;
+use WormholeSystems\ESI\Http\Connector;
 
-class ESIServiceProvider extends PackageServiceProvider
+final class ESIServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -21,5 +25,21 @@ class ESIServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasMigration('create_ws_esi_table')
             ->hasCommand(ESICommand::class);
+    }
+
+    public function packageRegistered(): void
+    {
+        // Bind the Connector
+        $this->app->singleton(Connector::class, function ($app) {
+            return new Connector($app->make(Http::class));
+        });
+
+        // Bind the main ESI class
+        $this->app->singleton(ESI::class, function ($app) {
+            return new ESI($app->make(Connector::class));
+        });
+
+        // Alias for easier access
+        $this->app->alias(ESI::class, 'esi');
     }
 }

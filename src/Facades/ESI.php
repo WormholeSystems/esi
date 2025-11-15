@@ -1,16 +1,18 @@
 <?php
 
-namespace NicolasKion\ESI\Facades;
+declare(strict_types=1);
+
+namespace WormholeSystems\ESI\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \NicolasKion\ESI\ESI
+ * @see \WormholeSystems\ESI\ESI
  */
-class ESI extends Facade
+final class ESI extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \NicolasKion\ESI\ESI::class;
+        return \WormholeSystems\ESI\ESI::class;
     }
 }

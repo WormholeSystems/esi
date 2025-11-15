@@ -1,12 +1,19 @@
 {
-    "name": "nicolaskion/ws-esi",
-    "description": "Typesafe ESI Integration",
+    "name": "wormholesystems/esi",
+    "description": "A comprehensive, type-safe Laravel package for integrating with the EVE Online ESI (EVE Swagger Interface) API",
     "keywords": [
-        "NicolasKion",
+        "eve",
         "laravel",
-        "ws-esi"
+        "wormholesystems",
+        "ws-esi",
+        "eve-online",
+        "esi",
+        "eve-api",
+        "eve-swagger-interface",
+        "mmo",
+        "gaming-api"
     ],
-    "homepage": "https://github.com/nicolaskion/ws-esi",
+    "homepage": "https://github.com/wormholesystems/esi",
     "license": "MIT",
     "authors": [
         {
@@ -17,6 +24,7 @@
     ],
     "require": {
         "php": "^8.4",
+        "guzzlehttp/guzzle": "^7.9",
         "illuminate/contracts": "^11.0||^12.0",
         "nette/php-generator": "^4.2",
         "spatie/laravel-package-tools": "^1.16"
@@ -35,13 +43,13 @@
     },
     "autoload": {
         "psr-4": {
-            "NicolasKion\\ESI\\": "src/",
-            "NicolasKion\\ESI\\Database\\Factories\\": "database/factories/"
+            "WormholeSystems\\ESI\\": "src/",
+            "WormholeSystems\\ESI\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NicolasKion\\ESI\\Tests\\": "tests/",
+            "WormholeSystems\\ESI\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +71,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "NicolasKion\\ESI\\ESIServiceProvider"
+                "WormholeSystems\\ESI\\ESIServiceProvider"
             ],
             "aliases": {
-                "ESI": "NicolasKion\\ESI\\Facades\\ESI"
+                "ESI": "WormholeSystems\\ESI\\Facades\\ESI"
             }
         }
     },

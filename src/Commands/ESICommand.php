@@ -1,10 +1,12 @@
 <?php
 
-namespace NicolasKion\ESI\Commands;
+declare(strict_types=1);
+
+namespace WormholeSystems\ESI\Commands;
 
 use Illuminate\Console\Command;
 
-class ESICommand extends Command
+final class ESICommand extends Command
 {
     public $signature = 'ws-esi';
 

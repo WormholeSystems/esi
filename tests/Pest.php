@@ -1,5 +1,7 @@
 <?php
 
-use NicolasKion\ESI\Tests\TestCase;
+declare(strict_types=1);
+
+use WormholeSystems\ESI\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

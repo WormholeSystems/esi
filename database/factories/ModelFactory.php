@@ -1,6 +1,8 @@
 <?php
 
-namespace NicolasKion\ESI\Database\Factories;
+declare(strict_types=1);
+
+namespace WormholeSystems\ESI\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

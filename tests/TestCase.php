@@ -1,10 +1,10 @@
 <?php
 
-namespace NicolasKion\ESI\Tests;
+namespace WormholeSystems\ESI\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use NicolasKion\ESI\ESIServiceProvider;
+use WormholeSystems\ESI\ESIServiceProvider;
 
 class TestCase extends Orchestra
 {
