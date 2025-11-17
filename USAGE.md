@@ -111,6 +111,7 @@ $result = ESI::characters->get(123456789);
 ## Error Handling
 
 All ESI errors have two properties:
+
 - `body` (array): The raw JSON response body
 - `statusCode` (int): The HTTP status code
 
